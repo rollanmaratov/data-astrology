@@ -44,7 +44,7 @@ export function Contact() {
              className="w-full py-5 rounded-xl bg-green-600 hover:bg-green-500 text-white font-medium transition-all shadow-[0_0_30px_rgba(22,163,74,0.4)] flex items-center justify-center gap-3 text-lg"
            >
              <MessageCircle className="w-6 h-6" />
-             Записаться на консультацию
+             Записаться на разбор
            </a>
         </motion.div>
       </div>

@@ -6,10 +6,10 @@ export function About() {
     <div className="min-h-screen py-24 px-4 relative z-10 overflow-hidden">
       {/* Decorative stars */}
       <div className="absolute top-40 right-10 opacity-30 animate-pulse text-purple-400">
-        <Sparkles className="w-12 h-12" />
+        {/* <Sparkles className="w-12 h-12" /> */}
       </div>
       <div className="absolute bottom-20 left-10 opacity-20 animate-pulse text-yellow-500">
-        <Star className="w-8 h-8" />
+        {/* <Star className="w-8 h-8" /> */}
       </div>
 
       <div className="container mx-auto max-w-5xl flex flex-col md:flex-row gap-16 items-center">

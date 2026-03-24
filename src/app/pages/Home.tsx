@@ -6,16 +6,16 @@ import { Contact } from "./Contact";
 
 export function Home() {
   return (
-    <div className="relative z-10">
+<div className="relative z-10">
       {/* Hero Section */}
       <section id="home" className="relative pt-24 pb-32 px-4 overflow-hidden">
         {/* Background Overlay */}
         <div className="absolute inset-0 z-[-1]">
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900/90 to-slate-950 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/90 via-slate-950/40 to-slate-950 z-10" />
           <img
-            src="https://images.unsplash.com/photo-1515705576963-95cad62945b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaWxreSUyMHdheSUyMGdhbGF4eXxlbnwxfHx8fDE3NzM3NDgwNTl8MA&ixlib=rb-4.1.0&q=80&w=1080"
-            alt="Milky Way Galaxy"
-            className="w-full h-full object-cover opacity-30"
+            src="https://images.unsplash.com/photo-1563547257011-054b1054e185?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Northern lights and stars"
+            className="w-full h-full object-cover opacity-80 mix-blend-screen"
           />
         </div>
 
@@ -112,7 +112,7 @@ export function Home() {
       {/* Testimonial preview */}
       <section className="py-24 px-4">
         <div className="container mx-auto text-center max-w-3xl">
-          <Star className="w-8 h-8 text-yellow-500 mx-auto mb-6" />
+          {/* <Star className="w-8 h-8 text-yellow-500 mx-auto mb-6" /> */}
           <blockquote className="font-serif text-2xl md:text-3xl text-white leading-relaxed mb-8">
             «Анализ моей натальной карты оказался невероятно познавательным. Я почувствовала, что кто-то наконец-то собрал мои разрозненные мысли в четкий и связный план моей жизни».
           </blockquote>
