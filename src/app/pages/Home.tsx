@@ -19,7 +19,7 @@ export function Home() {
           />
         </div>
 
-        <div className="container mx-auto flex flex-col items-center text-center max-w-2xl">
+        <div className="container mx-auto px-4 flex flex-col items-center text-center max-w-2xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -30,7 +30,7 @@ export function Home() {
               <span>Сакральные методы самопомощи</span>
             </div>
             
-            <h1 className="font-serif text-5xl md:text-6xl text-white mb-6 leading-tight drop-shadow-lg">Профессиональное чтение натальной карты</h1>
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight drop-shadow-lg break-words whitespace-normal">Профессиональное чтение натальной карты</h1>
             
             <p className="text-lg text-indigo-200 mb-10 leading-relaxed max-w-lg mx-auto">
               Dive deep into your astrological blueprint with an expert natal chart reading. Discover your unique strengths, challenges, and cosmic potential.
