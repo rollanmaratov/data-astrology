@@ -23,7 +23,7 @@ export function About() {
           <div className="absolute -inset-4 bg-gradient-to-tr from-purple-600/30 to-indigo-600/30 rounded-[2rem] blur-2xl -z-10" />
           <div className="relative rounded-[2rem] overflow-hidden border border-indigo-700/50 shadow-2xl shadow-indigo-900/40 group">
             <img
-              src="./dara.png"
+              src="https://i.imgur.com/bFHkjda.png"
               alt="Портрет Дары Якуповой"
               className="w-full h-auto object-cover aspect-[4/5] transform group-hover:scale-105 transition-transform duration-700"
             />
