@@ -33,7 +33,7 @@ export function Home() {
             <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight drop-shadow-lg break-words whitespace-normal">Профессиональное чтение натальной карты</h1>
             
             <p className="text-lg text-indigo-200 mb-10 leading-relaxed max-w-lg mx-auto">
-              Dive deep into your astrological blueprint with an expert natal chart reading. Discover your unique strengths, challenges, and cosmic potential.
+              {/* placeholder text */}
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -85,18 +85,18 @@ export function Home() {
               <h2 className="font-serif text-3xl md:text-4xl text-white">Что такое натальная карта?</h2>
               <div className="h-1 w-20 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full" />
               <p className="text-indigo-200 text-lg leading-relaxed">
-                Your natal chart is a map of the sky at the exact moment you were born. It serves as your personal cosmic fingerprint, revealing the unique energies, gifts, and karmic patterns that shape your life journey.
+                Ваша натальная карта — это карта неба в тот самый момент, когда вы родились. Она служит вашим личным космическим отпечатком пальца, раскрывая уникальные энергии, дары и кармические закономерности, которые формируют ваш жизненный путь.
               </p>
               <p className="text-indigo-200 text-lg leading-relaxed">
-                By understanding the placements of the Sun, Moon, and planets in your chart, you can gain profound insights into your personality, relationships, career path, and soul's purpose.
+                Понимая положение Солнца, Луны и планет в вашей карте, вы можете получить глубокое понимание своей личности, отношений, карьерного пути и предназначения души.
               </p>
               
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
                 {[
-                  { icon: Sun, text: "Core Identity & Ego" },
-                  { icon: Moon, text: "Emotional Landscape" },
-                  { icon: Star, text: "Hidden Potentials" },
-                  { icon: Sparkles, text: "Life Purpose" }
+                  { icon: Sun, text: "Ваша личность и эго" },
+                  { icon: Moon, text: "Эмоциональный ландшафт" },
+                  { icon: Star, text: "Скрытые возможности" },
+                  { icon: Sparkles, text: "Жизненное предназначение" }
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-center gap-3 bg-indigo-950/40 p-3 rounded-lg border border-indigo-900/50">
                     <item.icon className="w-5 h-5 text-purple-400" />
@@ -114,10 +114,10 @@ export function Home() {
         <div className="container mx-auto text-center max-w-3xl">
           <Star className="w-8 h-8 text-yellow-500 mx-auto mb-6" />
           <blockquote className="font-serif text-2xl md:text-3xl text-white leading-relaxed mb-8">
-            "The natal chart reading I received was incredibly eye-opening. It felt like someone finally put my scattered thoughts into a clear, cohesive roadmap for my life."
+            «Анализ моей натальной карты оказался невероятно познавательным. Я почувствовала, что кто-то наконец-то собрал мои разрозненные мысли в четкий и связный план моей жизни».
           </blockquote>
           <cite className="text-indigo-300 not-italic uppercase tracking-widest text-sm font-semibold">
-            — Sarah M., New York
+            — Айдана, Астана
           </cite>
         </div>
       </section>

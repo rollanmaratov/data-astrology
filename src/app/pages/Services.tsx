@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Book, Heart, CalendarDays, Compass, ArrowRight } from "lucide-react";
+import { Book, Heart, CalendarDays, Compass, ArrowRight, Baby } from "lucide-react";
 
 export function Services() {
   const services = [
@@ -24,55 +24,73 @@ export function Services() {
         • отношения и любовь (какой у вас тип привязанности, образ партнера, ожидания от отношений)
         • предназначение (та деятельность от которой вы будете ощущать себя на своем месте.
       `,
-      features: ["Sun, Moon, & Rising signs", "Major planetary aspects", "House placements", "North Node & Life Purpose"],
+      features: [
+        "Sun, Moon, & Rising signs",
+        "Major planetary aspects",
+        "House placements",
+        "North Node & Life Purpose",
+      ],
     },
     {
       title: "Совместимость",
       price: "$150 / 12,000 RR",
       duration: "",
-      icon: CalendarDays,
+      icon: Heart,
       description: `
       Данный разбор делается на 2х людей и затем накладывается друг на друга для определения стратегий эффективного взаимодействия
       • темперамент и тип активности
       • какая зона комфорта
       • какие ожидания от отношений
-      • какой идеальный образ женщины /
-      Мужчины
+      • какой идеальный образ женщины / мужчины
       • отношение к быту, проявления в социуме, тип мышления
       • "личный бренд" пары
       • точка несогласия, расхождения во взглядах
       `,
-      features: ["Current life themes", "Upcoming opportunities", "Navigating challenges", "Timing for major decisions"],
+      features: [
+        "Current life themes",
+        "Upcoming opportunities",
+        "Navigating challenges",
+        "Timing for major decisions",
+      ],
     },
     {
       title: "Соляр",
       price: "$100 / 8,000 RR",
       duration: "90 min",
-      icon: Heart,
+      icon: CalendarDays,
       description: `Персональный гороскоп на предстоящий год.
         Определение главных тем на год, в какой сфере ожидать изменений, на чем сфокусироваться
         Важно:
         Знать точное время рождения`,
-      features: ["Chart overlay analysis", "Communication styles", "Emotional compatibility", "Karmic ties"],
+      features: [
+        "Chart overlay analysis",
+        "Communication styles",
+        "Emotional compatibility",
+        "Karmic ties",
+      ],
     },
     {
       title: "Разбор ребенка",
       price: "$80 / 6,500 RR",
       duration: "45 min",
-      icon: Book,
+      icon: Baby,
       description: `
       Какие энергии выделены у ребенка
       • какие слабые слабые стороны и как их
       Проработать
-      • базовые потребности и особенности
-      Психики ребенка
+      • базовые потребности и особенности психики ребенка
       • страхи ребенка
       • как ребенок воспринимает информацию
       • зона интересов для изучения и общения
       • как ребенок "видит" своих родителей
       • как ребенок чувствует себя любимым
       `,
-      features: ["Year ahead forecast", "Major themes", "Favorable periods", "Challenges to watch for"],
+      features: [
+        "Year ahead forecast",
+        "Major themes",
+        "Favorable periods",
+        "Challenges to watch for",
+      ],
     },
     {
       title: "Событыйность",
@@ -84,7 +102,12 @@ export function Services() {
       Узнайте какие сценарии жизни заложены в вашу карту, а также максимальный потенциал вашего воплощения
       С вами не случится того, чего нет в вашей карте
       `,
-      features: ["Year ahead forecast", "Major themes", "Favorable periods", "Challenges to watch for"],
+      features: [
+        "Year ahead forecast",
+        "Major themes",
+        "Favorable periods",
+        "Challenges to watch for",
+      ],
     },
   ];
 
@@ -92,20 +115,22 @@ export function Services() {
     <div className="min-h-screen py-12 px-4 relative z-10">
       <div className="container mx-auto max-w-5xl">
         <div className="text-center mb-16">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             className="font-serif text-4xl md:text-5xl text-white mb-6 drop-shadow-lg"
           >
             Мои Услуги
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
             className="text-lg text-indigo-200 max-w-2xl mx-auto"
           >
-            Выберите чтение которое резонирует с вами, и я помогу вам раскрыть тайны вашей натальной карты и направить вас на путь самопознания и роста.
+            Выберите чтение которое резонирует с вами, и я помогу вам раскрыть
+            тайны вашей натальной карты и направить вас на путь самопознания и
+            роста.
           </motion.p>
         </div>
 
@@ -123,20 +148,31 @@ export function Services() {
                   <service.icon className="w-7 h-7" />
                 </div>
                 <div className="text-right">
-                  <span className="block text-2xl font-serif text-white">{service.price}</span>
-                  <span className="text-sm text-indigo-300">{service.duration}</span>
+                  <span className="block text-2xl font-serif text-white">
+                    {service.price}
+                  </span>
+                  {/* <span className="text-sm text-indigo-300">{service.duration}</span> */}
                 </div>
               </div>
 
               <h2 className="text-2xl font-serif text-white mb-4 group-hover:text-purple-300 transition-colors">
                 {service.title}
               </h2>
-              
-              <p className="text-indigo-200 mb-6 flex-grow">
-                {service.description}
-              </p>
 
-              <div className="mb-8">
+              {/* Render description as paragraphs (split on newlines) so text keeps intended breaks */}
+              <div className="text-indigo-200 mb-6 flex-grow">
+                {service.description
+                  .split("\n")
+                  .map((line) => line.trim())
+                  .filter(Boolean)
+                  .map((line, i) => (
+                    <p key={i} className="mb-2">
+                      {line}
+                    </p>
+                  ))}
+              </div>
+
+              {/* <div className="mb-8">
                 <h3 className="text-sm uppercase tracking-wider text-indigo-400 font-semibold mb-3">Includes:</h3>
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
@@ -146,7 +182,7 @@ export function Services() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </div> */}
 
               <a
                 href="#contact"
@@ -161,9 +197,17 @@ export function Services() {
 
         {/* Info Banner */}
         <div className="mt-16 bg-gradient-to-r from-purple-900/40 to-indigo-900/40 border border-indigo-500/30 rounded-2xl p-8 text-center">
-          <h3 className="text-xl font-serif text-white mb-2">Не знаете какое чтение выбрать?</h3>
+          <h3 className="text-xl font-serif text-white mb-2">
+            Не знаете какое чтение выбрать?
+          </h3>
           <p className="text-indigo-200 mb-6">
-            Если это ваш первый раз со мной, я рекомендую начать с разбора личности. Это даст вам глубокое понимание себя и поможет определить, какие аспекты вашей жизни требуют внимания. Если вы хотите узнать о предстоящем году, соляр - отличный выбор. А для понимания динамики в отношениях - совместимость будет идеальной. Если у вас есть конкретные вопросы или вы не уверены, что выбрать, не стесняйтесь связаться со мной для консультации.
+            Если это ваш первый раз со мной, я рекомендую начать с разбора
+            личности. Это даст вам глубокое понимание себя и поможет определить,
+            какие аспекты вашей жизни требуют внимания. Если вы хотите узнать о
+            предстоящем году, соляр - отличный выбор. А для понимания динамики в
+            отношениях - совместимость будет идеальной. Если у вас есть
+            конкретные вопросы или вы не уверены, что выбрать, не стесняйтесь
+            связаться со мной для консультации.
           </p>
           <a
             href="#contact"
