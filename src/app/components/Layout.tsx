@@ -5,10 +5,13 @@ import { FaInstagram } from "react-icons/fa";
 import { motion, AnimatePresence } from "motion/react";
 import { HugeiconsIcon } from '@hugeicons/react'
 import { SaturnIcon } from '@hugeicons/core-free-icons'
+import { LanguageSwitcher } from "./LanguageSwitcher";
+import { useTranslation } from 'react-i18next';
 
 export function Layout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     setIsMenuOpen(false);
@@ -21,10 +24,10 @@ export function Layout() {
   }, [location.pathname]);
 
   const navLinks = [
-    { name: "Главная", href: "#home" },
-    { name: "Услуги", href: "#services" },
-    { name: "Обо мне", href: "#about" },
-    { name: "Запись на консультацию", href: "#contact" },
+    { name: t('nav.home'), href: "#home" },
+    { name: t('nav.services'), href: "#services" },
+    { name: t('nav.about'), href: "#about" },
+    { name: t('nav.contact'), href: "#contact" },
   ];
 
   const handleNavClick = () => setIsMenuOpen(false);
@@ -60,6 +63,7 @@ export function Layout() {
                 {link.name}
               </a>
             ))}
+            <LanguageSwitcher />
           </nav>
         </div>
       </header>
@@ -84,6 +88,7 @@ export function Layout() {
                   {link.name}
                 </a>
               ))}
+              <LanguageSwitcher />
               
               <div className="flex gap-6 mt-12 text-purple-400/50">
                 <Star className="w-6 h-6 animate-pulse" />
@@ -109,7 +114,7 @@ export function Layout() {
           <HugeiconsIcon icon={SaturnIcon} className="w-8 h-8 text-purple-500 mb-4" />
           <h2 className="font-serif text-2xl text-white mb-2">planet.ohara</h2>
           <p className="text-indigo-200 max-w-sm mb-8">
-            Интуитивное толкование натальной карты поможет вам в вашем путешествии по космосу.
+            {t('footer.description')}
           </p>
           <div className="flex items-center gap-6 mb-8">
             <a 
@@ -134,7 +139,7 @@ export function Layout() {
             </a>
           </div>
           <div className="text-sm text-indigo-400/60">
-            &copy; {new Date().getFullYear()} planet.ohara. All cosmic rights reserved.
+            &copy; {new Date().getFullYear()} planet.ohara. {t('footer.copyright')}
           </div>
         </div>
       </footer>

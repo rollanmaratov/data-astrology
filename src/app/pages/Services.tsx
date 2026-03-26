@@ -1,29 +1,16 @@
 import { motion } from "motion/react";
 import { Book, Heart, CalendarDays, Compass, ArrowRight, Baby } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 export function Services() {
+  const { t } = useTranslation();
   const services = [
     {
-      title: "Разбор личности",
-      price: "$120 / 10,000 RR",
-      duration: "90 min",
+      title: t('services.personalAnalysis.title'),
+      price: t('services.personalAnalysis.price'),
+      duration: t('services.personalAnalysis.duration'),
       icon: Compass,
-      description: `
-      Вы узнаете себя и сможете сами
-      Помогать себе при любом "шторме"
-      Свои сильные и слабые стороны
-        • как обрести баланс энергий
-        • тип активности и темперамент
-        • узнаете какое впечатление вы производите при знакомстве
-        • в чем ваша сила
-        • ваши глубинные страхи и как с ними примирится
-        • как вам выйти на новый уровень развития и добиться расширения по всем фронтам
-        И 2 кратких запроса, например:
-        • деньги (как именно ведут себя ваши деньги, стратегия приумножения и в чем может быть ваш
-        Side hustle)
-        • отношения и любовь (какой у вас тип привязанности, образ партнера, ожидания от отношений)
-        • предназначение (та деятельность от которой вы будете ощущать себя на своем месте.
-      `,
+      description: t('services.personalAnalysis.description'),
       features: [
         "Sun, Moon, & Rising signs",
         "Major planetary aspects",
@@ -32,20 +19,11 @@ export function Services() {
       ],
     },
     {
-      title: "Совместимость",
-      price: "$150 / 12,000 RR",
+      title: t('services.compatibility.title'),
+      price: t('services.compatibility.price'),
       duration: "",
       icon: Heart,
-      description: `
-      Данный разбор делается на 2х людей и затем накладывается друг на друга для определения стратегий эффективного взаимодействия
-      • темперамент и тип активности
-      • какая зона комфорта
-      • какие ожидания от отношений
-      • какой идеальный образ женщины / мужчины
-      • отношение к быту, проявления в социуме, тип мышления
-      • "личный бренд" пары
-      • точка несогласия, расхождения во взглядах
-      `,
+      description: t('services.compatibility.description'),
       features: [
         "Current life themes",
         "Upcoming opportunities",
@@ -54,14 +32,11 @@ export function Services() {
       ],
     },
     {
-      title: "Соляр",
-      price: "$100 / 8,000 RR",
-      duration: "90 min",
+      title: t('services.solar.title'),
+      price: t('services.solar.price'),
+      duration: t('services.solar.duration'),
       icon: CalendarDays,
-      description: `Персональный гороскоп на предстоящий год.
-        Определение главных тем на год, в какой сфере ожидать изменений, на чем сфокусироваться
-        Важно:
-        Знать точное время рождения`,
+      description: t('services.solar.description'),
       features: [
         "Chart overlay analysis",
         "Communication styles",
@@ -70,21 +45,11 @@ export function Services() {
       ],
     },
     {
-      title: "Разбор ребенка",
-      price: "$80 / 6,500 RR",
-      duration: "45 min",
+      title: t('services.childAnalysis.title'),
+      price: t('services.childAnalysis.price'),
+      duration: t('services.childAnalysis.duration'),
       icon: Baby,
-      description: `
-      Какие энергии выделены у ребенка
-      • какие слабые слабые стороны и как их
-      Проработать
-      • базовые потребности и особенности психики ребенка
-      • страхи ребенка
-      • как ребенок воспринимает информацию
-      • зона интересов для изучения и общения
-      • как ребенок "видит" своих родителей
-      • как ребенок чувствует себя любимым
-      `,
+      description: t('services.childAnalysis.description'),
       features: [
         "Year ahead forecast",
         "Major themes",
@@ -93,15 +58,11 @@ export function Services() {
       ],
     },
     {
-      title: "Событыйность",
-      price: "$130 / 11,000 RR",
-      duration: "45 min",
+      title: t('services.synastry.title'),
+      price: t('services.synastry.price'),
+      duration: t('services.synastry.duration'),
       icon: Book,
-      description: `
-      Расшифровка всех связей домов по вашему сакральному паспорту.
-      Узнайте какие сценарии жизни заложены в вашу карту, а также максимальный потенциал вашего воплощения
-      С вами не случится того, чего нет в вашей карте
-      `,
+      description: t('services.synastry.description'),
       features: [
         "Year ahead forecast",
         "Major themes",
@@ -120,7 +81,7 @@ export function Services() {
             animate={{ opacity: 1, y: 0 }}
             className="font-serif text-4xl md:text-5xl text-white mb-6 drop-shadow-lg"
           >
-            Мои Услуги
+            {t('services.title')}
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -128,9 +89,7 @@ export function Services() {
             transition={{ delay: 0.1 }}
             className="text-lg text-indigo-200 max-w-2xl mx-auto"
           >
-            Выберите чтение которое резонирует с вами, и я помогу вам раскрыть
-            тайны вашей натальной карты и направить вас на путь самопознания и
-            роста.
+            {t('services.subtitle')}
           </motion.p>
         </div>
 
@@ -188,7 +147,7 @@ export function Services() {
                 href="#contact"
                 className="mt-auto w-full py-3 px-4 rounded-lg bg-indigo-950 text-indigo-100 font-medium hover:bg-purple-600 hover:text-white transition-all flex items-center justify-center gap-2 border border-indigo-800 hover:border-purple-500 group-hover:shadow-[0_0_15px_rgba(147,51,234,0.3)]"
               >
-                Выбрать это чтение
+                {t('services.cta')}
                 <ArrowRight className="w-4 h-4" />
               </a>
             </motion.div>
@@ -198,22 +157,16 @@ export function Services() {
         {/* Info Banner */}
         <div className="mt-16 bg-gradient-to-r from-purple-900/40 to-indigo-900/40 border border-indigo-500/30 rounded-2xl p-8 text-center">
           <h3 className="text-xl font-serif text-white mb-2">
-            Не знаете какое чтение выбрать?
+            {t('services.help.title')}
           </h3>
           <p className="text-indigo-200 mb-6">
-            Если это ваш первый раз со мной, я рекомендую начать с разбора
-            личности. Это даст вам глубокое понимание себя и поможет определить,
-            какие аспекты вашей жизни требуют внимания. Если вы хотите узнать о
-            предстоящем году, соляр - отличный выбор. А для понимания динамики в
-            отношениях - совместимость будет идеальной. Если у вас есть
-            конкретные вопросы или вы не уверены, что выбрать, не стесняйтесь
-            связаться со мной для консультации.
+            {t('services.help.description')}
           </p>
           <a
             href="#contact"
             className="inline-flex items-center gap-2 text-purple-300 hover:text-purple-200 font-medium underline underline-offset-4"
           >
-            Свяжитесь со мной для консультации
+            {t('services.help.cta')}
           </a>
         </div>
       </div>

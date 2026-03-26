@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About Me",
+    "contact": "Book Consultation"
+  },
+  "hero": {
+    "badge": "Sacred Self-Help Methods",
+    "title": "Professional Natal Chart Reading",
+    "description": "Your natal chart is a map of the sky at the exact moment you were born. It serves as your personal cosmic fingerprint, revealing unique energies, gifts, and karmic patterns that shape your life path.",
+    "cta": "Book a Consultation",
+    "services": "My Services"
+  },
+  "natalChart": {
+    "title": "What is a Natal Chart?",
+    "description1": "Your natal chart is a map of the sky at the exact moment you were born. It serves as your personal cosmic fingerprint, revealing unique energies, gifts, and karmic patterns that shape your life path.",
+    "description2": "By understanding the positions of the Sun, Moon, and planets in your chart, you can gain deep insight into your personality, relationships, career path, and soul's purpose.",
+    "personality": "Your personality and ego",
+    "emotions": "Emotional landscape",
+    "potential": "Hidden possibilities",
+    "purpose": "Life purpose"
+  },
+  "testimonial": {
+    "text": "\"Dara, dear, I would like to thank you for such a luxurious analysis of my date. It really is such hard work - so many insights, so many tips: I received not just a consultation, but also a parallel practical course of actions. Just a bombastic combo: analysis, psychological therapy, motivation, expansion of thinking, and turning in the right direction. Thank you so much - I really appreciate it. I have good intuition: I jumped on the train in time, soon you won't be able to get to you.\"",
+    "author": "— Ekaterina, Saint Petersburg"
+  },
+  "services": {
+    "title": "My Services",
+    "subtitle": "Choose a reading that resonates with you, and I will help you uncover the mysteries of your natal chart and guide you on the path of self-discovery and growth.",
+    "personalAnalysis": {
+      "title": "Personal Analysis",
+      "price": "$120 / 10,000 RR",
+      "duration": "90 min",
+      "description": "You will get to know yourself and be able to\nHelp yourself in any \"storm\"\nYour strengths and weaknesses\n• how to achieve energy balance\n• type of activity and temperament\n• learn what impression you make when meeting\n• where your strength lies\n• your deep fears and how to reconcile with them\n• how to reach a new level of development and achieve expansion in all areas\nAnd 2 brief queries, for example:\n• money (how exactly your money behaves, multiplication strategy and what could be your\nSide hustle)\n• relationships and love (what type of attachment you have, partner image, relationship expectations)\n• purpose (the activity from which you will feel in your place."
+    },
+    "compatibility": {
+      "title": "Compatibility",
+      "price": "$150 / 12,000 RR",
+      "description": "This analysis is done for 2 people and then overlaid on each other to determine effective interaction strategies\n• temperament and type of activity\n• what comfort zone\n• what expectations from relationships\n• what ideal image of a woman / man\n• attitude to everyday life, manifestations in society, type of thinking\n• couple's \"personal brand\"\n• point of disagreement, differences in views"
+    },
+    "solar": {
+      "title": "Solar",
+      "price": "$100 / 8,000 RR",
+      "duration": "90 min",
+      "description": "Personal horoscope for the upcoming year.\nDetermining the main themes for the year, in which area to expect changes, what to focus on\nImportant:\nKnow the exact time of birth"
+    },
+    "childAnalysis": {
+      "title": "Child Analysis",
+      "price": "$80 / 6,500 RR",
+      "duration": "45 min",
+      "description": "What energies are highlighted in the child\n• what weaknesses and how to\nWork through them\n• basic needs and characteristics of the child's psyche\n• child's fears\n• how the child perceives information\n• area of interests for study and communication\n• how the child \"sees\" their parents\n• how the child feels loved"
+    },
+    "synastry": {
+      "title": "Synastry",
+      "price": "$130 / 11,000 RR",
+      "duration": "45 min",
+      "description": "Decoding all house connections according to your sacred passport.\nFind out what life scenarios are embedded in your chart, as well as the maximum potential of your incarnation\nNothing will happen to you that is not in your chart"
+    },
+    "cta": "Choose this reading",
+    "help": {
+      "title": "Don't know which reading to choose?",
+      "description": "If this is your first time with me, I recommend starting with personal analysis. This will give you a deep understanding of yourself and help determine which aspects of your life need attention. If you want to know about the coming year, solar is an excellent choice. And for understanding relationship dynamics - compatibility will be ideal. If you have specific questions or are unsure what to choose, feel free to contact me for consultation.",
+      "cta": "Contact me for consultation"
+    }
+  },
+  "about": {
+    "badge": "Certified Astrologer",
+    "title": "About Me",
+    "name": "Dara Yakupova",
+    "location": "Riyadh, Saudi Arabia",
+    "description1": "Hello, my name is Dara. My journey into astrology began more than ten years ago when a chance encounter with my natal chart completely changed my worldview. I realized that the stars do not predetermine our destiny; rather, they offer a deep language for understanding our deepest potential, cyclical challenges, and unique karmic path.",
+    "description2": "I specialize in evolutionary and psychological astrology. This means that my readings go beyond simple zodiac sign horoscopes. Instead, we dive into the rich complexities of your natal chart, exploring your emotional landscape, relationship dynamics, and life purpose.",
+    "description3": "My goal is to empower you. Whether you're going through a difficult transition, seeking clarity on an important life decision, or simply wanting to understand yourself better, a natal chart reading provides a cosmic mirror reflecting the brilliant, complex being that you truly are.",
+    "experience": "years of experience",
+    "chartsRead": "Charts read"
+  },
+  "contact": {
+    "badge": "Connect with the cosmos",
+    "title": "Contact",
+    "description": "Ready to explore your astrological chart? Contact me directly via WhatsApp to discuss availability and book a session.",
+    "cta": "Book a Reading"
+  },
+  "footer": {
+    "description": "Intuitive natal chart interpretation will help you in your cosmic journey.",
+    "copyright": "All cosmic rights reserved."
+  },
+  "language": {
+    "switch": "Switch Language"
+  }
+}

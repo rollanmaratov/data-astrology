@@ -3,8 +3,10 @@ import { Sparkles, ArrowRight, Star, Moon, Sun } from "lucide-react";
 import { Services } from "./Services";
 import { About } from "./About";
 import { Contact } from "./Contact";
+import { useTranslation } from 'react-i18next';
 
 export function Home() {
+  const { t } = useTranslation();
   return (
 <div className="relative z-10">
       {/* Hero Section */}
@@ -27,13 +29,13 @@ export function Home() {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-purple-500/30 bg-purple-900/20 text-purple-300 text-sm mb-6 shadow-[0_0_20px_rgba(168,85,247,0.15)]">
               <Sparkles className="w-4 h-4" />
-              <span>Сакральные методы самопомощи</span>
+              <span>{t('hero.badge')}</span>
             </div>
             
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight drop-shadow-lg break-words whitespace-normal">Профессиональное чтение натальной карты</h1>
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight drop-shadow-lg break-words whitespace-normal">{t('hero.title')}</h1>
             
             <p className="text-lg text-indigo-200 mb-10 leading-relaxed max-w-lg mx-auto">
-              {/* placeholder text */}
+              {t('hero.description')}
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -41,14 +43,14 @@ export function Home() {
                 href="#contact"
                 className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium hover:from-purple-500 hover:to-indigo-500 transition-all shadow-[0_0_30px_rgba(147,51,234,0.4)] flex items-center justify-center gap-2"
               >
-                Запишитесь на консультацию
+                {t('hero.cta')}
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
                 href="#services"
                 className="w-full sm:w-auto px-8 py-4 rounded-full border border-indigo-700 hover:bg-indigo-900/30 text-indigo-100 font-medium transition-colors flex items-center justify-center gap-2"
               >
-                Мои услуги
+                {t('hero.services')}
               </a>
             </div>
           </motion.div>
@@ -67,7 +69,7 @@ export function Home() {
             >
               <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-transparent rounded-2xl blur-xl" />
               <img
-                src="https://i.pinimg.com/736x/d7/18/b8/d718b8903383d3bf1889ca41d6215aa2.jpg"
+                src="https://i.imgur.com/ckZsdiJ.png"
                 alt="Astrology Natal Chart"
                 className="rounded-2xl border border-indigo-800/50 shadow-2xl relative z-10 w-full object-cover aspect-square md:aspect-auto md:h-[500px]"
               />
@@ -82,21 +84,21 @@ export function Home() {
               viewport={{ once: true }}
               className="w-full md:w-1/2 flex flex-col gap-6"
             >
-              <h2 className="font-serif text-3xl md:text-4xl text-white">Что такое натальная карта?</h2>
+              <h2 className="font-serif text-3xl md:text-4xl text-white">{t('natalChart.title')}</h2>
               <div className="h-1 w-20 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full" />
               <p className="text-indigo-200 text-lg leading-relaxed">
-                Ваша натальная карта — это карта неба в тот самый момент, когда вы родились. Она служит вашим личным космическим отпечатком пальца, раскрывая уникальные энергии, дары и кармические закономерности, которые формируют ваш жизненный путь.
+                {t('natalChart.description1')}
               </p>
               <p className="text-indigo-200 text-lg leading-relaxed">
-                Понимая положение Солнца, Луны и планет в вашей карте, вы можете получить глубокое понимание своей личности, отношений, карьерного пути и предназначения души.
+                {t('natalChart.description2')}
               </p>
               
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
                 {[
-                  { icon: Sun, text: "Ваша личность и эго" },
-                  { icon: Moon, text: "Эмоциональный ландшафт" },
-                  { icon: Star, text: "Скрытые возможности" },
-                  { icon: Sparkles, text: "Жизненное предназначение" }
+                  { icon: Sun, text: t('natalChart.personality') },
+                  { icon: Moon, text: t('natalChart.emotions') },
+                  { icon: Star, text: t('natalChart.potential') },
+                  { icon: Sparkles, text: t('natalChart.purpose') }
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-center gap-3 bg-indigo-950/40 p-3 rounded-lg border border-indigo-900/50">
                     <item.icon className="w-5 h-5 text-purple-400" />
@@ -113,11 +115,11 @@ export function Home() {
       <section className="py-24 px-4">
         <div className="container mx-auto text-center max-w-3xl">
           {/* <Star className="w-8 h-8 text-yellow-500 mx-auto mb-6" /> */}
-          <blockquote className="font-serif text-2xl md:text-3xl text-white leading-relaxed mb-8">
-            «Анализ моей натальной карты оказался невероятно познавательным. Я почувствовала, что кто-то наконец-то собрал мои разрозненные мысли в четкий и связный план моей жизни».
+          <blockquote className="font-serif --text-lg text-white leading-relaxed mb-8">
+            {t('testimonial.text')}
           </blockquote>
           <cite className="text-indigo-300 not-italic uppercase tracking-widest text-sm font-semibold">
-            — Айдана, Астана
+            {t('testimonial.author')}
           </cite>
         </div>
       </section>
