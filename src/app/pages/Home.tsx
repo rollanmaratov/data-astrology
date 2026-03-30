@@ -32,7 +32,7 @@ export function Home() {
               <span>{t('hero.badge')}</span>
             </div>
             
-            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-17 drop-shadow-lg break-words whitespace-normal">{t('hero.title')}</h1>
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight sm:leading-snug md:leading-normal lg:leading-relaxed drop-shadow-lg break-words whitespace-normal">{t('hero.title')}</h1>
             
             <p className="text-lg text-indigo-200 mb-10 leading-relaxed max-w-lg mx-auto">
               {t('hero.description')}
