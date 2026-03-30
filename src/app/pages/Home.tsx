@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Sparkles, ArrowRight, Star, Moon, Sun } from "lucide-react";
+import { Sparkles, ArrowRight, Star, Moon, Sun, Heart, Briefcase } from "lucide-react";
 import { Services } from "./Services";
 import { About } from "./About";
 import { Contact } from "./Contact";
@@ -32,7 +32,7 @@ export function Home() {
               <span>{t('hero.badge')}</span>
             </div>
             
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight drop-shadow-lg break-words whitespace-normal">{t('hero.title')}</h1>
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-17 drop-shadow-lg break-words whitespace-normal">{t('hero.title')}</h1>
             
             <p className="text-lg text-indigo-200 mb-10 leading-relaxed max-w-lg mx-auto">
               {t('hero.description')}
@@ -89,23 +89,22 @@ export function Home() {
               <p className="text-indigo-200 text-lg leading-relaxed">
                 {t('natalChart.description1')}
               </p>
-              <p className="text-indigo-200 text-lg leading-relaxed">
-                {t('natalChart.description2')}
-              </p>
               
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-                {[
-                  { icon: Sun, text: t('natalChart.personality') },
-                  { icon: Moon, text: t('natalChart.emotions') },
-                  { icon: Star, text: t('natalChart.potential') },
-                  { icon: Sparkles, text: t('natalChart.purpose') }
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-center gap-3 bg-indigo-950/40 p-3 rounded-lg border border-indigo-900/50">
-                    <item.icon className="w-5 h-5 text-purple-400" />
-                    <span className="text-indigo-100">{item.text}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="space-y-6 mt-6">
+                {(t('natalChart.description2', { returnObjects: true }) as any[]).map((item, index) => {
+                  const icons = [Sun, Heart, Briefcase, Star];
+                  const Icon = icons[index];
+                  return (
+                    <div key={index} className="flex gap-4">
+                      <Icon className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
+                      <div>
+                        <h3 className="text-lg font-bold text-white">{item.heading}</h3>
+                        <p className="text-indigo-200 leading-relaxed">{item.description}</p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </motion.div>
           </div>
         </div>
@@ -115,7 +114,7 @@ export function Home() {
       <section className="py-24 px-4">
         <div className="container mx-auto text-center max-w-3xl">
           {/* <Star className="w-8 h-8 text-yellow-500 mx-auto mb-6" /> */}
-          <blockquote className="font-serif --text-lg text-white leading-relaxed mb-8">
+          <blockquote className="font-serif text-lg text-white leading-relaxed mb-8">
             {t('testimonial.text')}
           </blockquote>
           <cite className="text-indigo-300 not-italic uppercase tracking-widest text-sm font-semibold">

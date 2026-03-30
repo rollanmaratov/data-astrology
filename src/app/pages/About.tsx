@@ -14,13 +14,13 @@ export function About() {
         {/* <Star className="w-8 h-8" /> */}
       </div>
 
-      <div className="container mx-auto max-w-5xl flex flex-col md:flex-row gap-16 items-center">
+      <div className="container mx-auto max-w-5xl flex flex-col md:flex-row gap-16 items-start">
         {/* Image Section */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-full md:w-5/12 relative"
+          className="w-full md:w-5/12 relative mt-12"
         >
           <div className="absolute -inset-4 bg-gradient-to-tr from-purple-600/30 to-indigo-600/30 rounded-[2rem] blur-2xl -z-10" />
           <div className="relative rounded-[2rem] overflow-hidden border border-indigo-700/50 shadow-2xl shadow-indigo-900/40 group">
@@ -55,7 +55,7 @@ export function About() {
           <h2 className="font-serif text-4xl md:text-5xl text-white mb-2 leading-tight">{t('about.title')}</h2>
           <div className="h-1 w-16 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full" />
           
-          <div className="prose prose-invert prose-lg text-indigo-100/90 mt-4 leading-relaxed">
+          <div className="prose prose-invert prose-lg text-indigo-100/90 mt-4 leading-relaxed text-justify">
             <p className="mb-6">{t('about.description1')}</p>
             <p className="mb-6">
               {t('about.description2')}

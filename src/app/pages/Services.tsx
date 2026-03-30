@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Book, Heart, CalendarDays, Compass, ArrowRight, Baby } from "lucide-react";
+import { Book, Heart, CalendarDays, Compass, ArrowRight, Baby, DollarSign, Building, Clock, AlertTriangle, Moon } from "lucide-react";
 import { useTranslation } from 'react-i18next';
 
 export function Services() {
@@ -8,67 +8,56 @@ export function Services() {
     {
       title: t('services.personalAnalysis.title'),
       price: t('services.personalAnalysis.price'),
-      duration: t('services.personalAnalysis.duration'),
       icon: Compass,
       description: t('services.personalAnalysis.description'),
-      features: [
-        "Sun, Moon, & Rising signs",
-        "Major planetary aspects",
-        "House placements",
-        "North Node & Life Purpose",
-      ],
+    },
+    {
+      title: t('services.lunarAnalysis.title'),
+      price: t('services.lunarAnalysis.price'),
+      icon: Moon,
+      description: t('services.lunarAnalysis.description'),
     },
     {
       title: t('services.compatibility.title'),
       price: t('services.compatibility.price'),
-      duration: "",
       icon: Heart,
       description: t('services.compatibility.description'),
-      features: [
-        "Current life themes",
-        "Upcoming opportunities",
-        "Navigating challenges",
-        "Timing for major decisions",
-      ],
     },
     {
       title: t('services.solar.title'),
       price: t('services.solar.price'),
-      duration: t('services.solar.duration'),
       icon: CalendarDays,
       description: t('services.solar.description'),
-      features: [
-        "Chart overlay analysis",
-        "Communication styles",
-        "Emotional compatibility",
-        "Karmic ties",
-      ],
     },
     {
       title: t('services.childAnalysis.title'),
       price: t('services.childAnalysis.price'),
-      duration: t('services.childAnalysis.duration'),
       icon: Baby,
       description: t('services.childAnalysis.description'),
-      features: [
-        "Year ahead forecast",
-        "Major themes",
-        "Favorable periods",
-        "Challenges to watch for",
-      ],
     },
     {
-      title: t('services.synastry.title'),
-      price: t('services.synastry.price'),
-      duration: t('services.synastry.duration'),
-      icon: Book,
-      description: t('services.synastry.description'),
-      features: [
-        "Year ahead forecast",
-        "Major themes",
-        "Favorable periods",
-        "Challenges to watch for",
-      ],
+      title: t('services.financialPotential.title'),
+      price: t('services.financialPotential.price'),
+      icon: DollarSign,
+      description: t('services.financialPotential.description'),
+    },
+    {
+      title: t('services.businessAnalysis.title'),
+      price: t('services.businessAnalysis.price'),
+      icon: Building,
+      description: t('services.businessAnalysis.description'),
+    },
+    {
+      title: t('services.rectification.title'),
+      price: t('services.rectification.price'),
+      icon: Clock,
+      description: t('services.rectification.description'),
+    },
+    {
+      title: t('services.crisisExit.title'),
+      price: t('services.crisisExit.price'),
+      icon: AlertTriangle,
+      description: t('services.crisisExit.description'),
     },
   ];
 
@@ -125,9 +114,7 @@ export function Services() {
                   .map((line) => line.trim())
                   .filter(Boolean)
                   .map((line, i) => (
-                    <p key={i} className="mb-2">
-                      {line}
-                    </p>
+                    <p key={i} className="mb-2" dangerouslySetInnerHTML={{ __html: line }} />
                   ))}
               </div>
 
