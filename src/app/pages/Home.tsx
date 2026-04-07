@@ -11,6 +11,7 @@ import {
 import { Services } from "./Services";
 import { About } from "./About";
 import { Contact } from "./Contact";
+import { ConsultationFormat } from "./ConsultationFormat";
 import { useTranslation } from "react-i18next";
 
 export function Home() {
@@ -81,11 +82,8 @@ export function Home() {
               <img
                 src="https://i.imgur.com/ckZsdiJ.png"
                 alt="Astrology Natal Chart"
-                className="rounded-2xl border border-indigo-800/50 shadow-2xl relative z-10 w-full object-cover aspect-square md:aspect-auto md:h-[500px]"
+                className="rounded-2xl border border-indigo-800/50 shadow-2xl relative z-10 w-full object-scale-down"
               />
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-purple-600 rounded-full flex items-center justify-center border-4 border-slate-900 shadow-xl z-20">
-                <Sun className="w-10 h-10 text-yellow-300" />
-              </div>
             </motion.div>
 
             <motion.div
@@ -144,6 +142,11 @@ export function Home() {
       {/* Services Section */}
       <section id="services">
         <Services />
+      </section>
+
+      {/* Consultation Format Section */}
+      <section id="consultation-format">
+        <ConsultationFormat />
       </section>
 
       {/* About Section */}

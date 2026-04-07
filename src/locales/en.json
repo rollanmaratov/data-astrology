@@ -2,6 +2,7 @@
   "nav": {
     "home": "Home",
     "services": "Services",
+    "format": "Format",
     "about": "About Me",
     "contact": "Book Consultation"
   },
@@ -96,7 +97,7 @@
   "about": {
     "badge": "Astrologer, Researcher, Sacralogist",
     "title": "About Me",
-    "name": "Dara Yakupova",
+    "name": "Dara",
     "location": "Riyadh, Saudi Arabia",
     "description1": "I came to astrology in a state of deep crisis and searching for answers. It was this method that helped me rediscover myself, take responsibility for my own choices, and start acting exclusively towards growth. As a result, my life changed dramatically for the better.",
     "description2": "My approach is based on precise algorithms and deep structural analysis, combined with subtle, intuitive feeling of your chart.",
@@ -108,7 +109,7 @@
     "badge": "Connect with the cosmos",
     "title": "Contact",
     "description": "Ready to explore your astrological chart? Contact me directly via WhatsApp to discuss availability and book a session.",
-    "cta": "Book a Reading"
+    "cta": "Book Session"
   },
   "footer": {
     "description": "Your chart contains all the answers to any questions.",
@@ -116,5 +117,38 @@
   },
   "language": {
     "switch": "Switch Language"
+  },
+  "consultationFormat": {
+    "title": "Consultation Format",
+    "interactionFormat": "Interaction Format",
+    "workAlgorithm": "Work Algorithm",
+    "interactionFormats": [
+      {
+        "title": "Text Summary",
+        "description": "Before the call, I prepare a text document with an analysis of your chart. This is a fundamental basis with deciphered formulas, which you can refer to at any time."
+      },
+      {
+        "title": "In-person call",
+        "description": "Online consultation, where we analyze your scenarios, highlight key areas, and formulate an action plan."
+      }
+    ],
+    "workAlgorithms": [
+      {
+        "title": "Application & Format",
+        "description": "You submit a request for analysis. If you haven't decided on the type of consultation, I will help you find the right option."
+      },
+      {
+        "title": "Payment",
+        "description": "Work on the chart begins after 100% prepayment."
+      },
+      {
+        "title": "Data Collection",
+        "description": "You provide metrics (date, time, city of birth) and fill out the questionnaire to apply the chart's algorithms to your real-life context."
+      },
+      {
+        "title": "Setting a date",
+        "description": "After receiving the responses and information, we agree on the day and time of our call."
+      }
+    ]
   }
 }
