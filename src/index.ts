@@ -1,24 +1,16 @@
 export default {
-  async fetch(request, env, ctx) {
+  async fetch(request, env) {
     const url = new URL(request.url);
-    const pathname = url.pathname;
 
-    // Don't redirect static files or API calls
-    if (pathname.startsWith("/assets/") || pathname.endsWith(".svg") || pathname.endsWith(".ico")) {
-      return env.ASSETS.fetch(request);
-    }
-
-    // Try to serve the requested file
+    // Try to get the asset
     let response = await env.ASSETS.fetch(request);
-    
-    // If file found, return it
-    if (response.status !== 404) {
-      return response;
-    }
 
-    // For SPA routing on 404, serve index.html
-    if (request.method === "GET") {
-      return await env.ASSETS.fetch("/index.html");
+    // If 404 and it's a navigation request, serve index.html
+    if (response.status === 404 && request.method === "GET") {
+      // Check if it looks like a route (no file extension)
+      if (!url.pathname.includes(".")) {
+        response = await env.ASSETS.fetch(new Request(new URL("/index.html", url.origin)));
+      }
     }
 
     return response;
