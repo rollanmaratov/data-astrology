@@ -1,36 +1,25 @@
-import { getAssetFromKV } from '@cloudflare/kv-asset-handler'
-
 export default {
   async fetch(request, env) {
-    try {
-      // Serve static files from the website bucket
-      return await getAssetFromKV({
-        request,
-        waitUntil: () => {},
-      }, {
-        ASSET_NAMESPACE: env.ASSETS,
-        ASSET_MANIFEST: typeof __STATIC_CONTENT_MANIFEST === 'string' 
-          ? JSON.parse(__STATIC_CONTENT_MANIFEST)
-          : {}
-      })
-    } catch (e) {
-      // If not found, serve index.html for SPA routing
-      if (request.method === 'GET') {
-        try {
-          return await getAssetFromKV({
-            request: new Request('index.html', { method: 'GET' }),
-            waitUntil: () => {},
-          }, {
-            ASSET_NAMESPACE: env.ASSETS,
-            ASSET_MANIFEST: typeof __STATIC_CONTENT_MANIFEST === 'string'
-              ? JSON.parse(__STATIC_CONTENT_MANIFEST)
-              : {}
-          })
-        } catch (e) {
-          return new Response('Not found', { status: 404 })
-        }
-      }
-      return new Response('error', { status: 500 })
+    const url = new URL(request.url);
+    const path = url.pathname;
+
+    // Try to serve the requested file from assets
+    const response = await env.ASSETS.fetch(request);
+
+    // If asset is found, return it
+    if (response.status !== 404) {
+      return response;
     }
-  }
-}
+
+    // For SPA routing: serve index.html for any non-existent routes
+    if (request.method === "GET") {
+      return await env.ASSETS.fetch(
+        new Request(`${new URL(request.url).origin}/index.html`, {
+          method: "GET",
+        }),
+      );
+    }
+
+    return response;
+  },
+};
