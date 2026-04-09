@@ -1,0 +1,16 @@
+name = "astrology-expert-website"
+main = "src/index.ts"
+compatibility_date = "2024-04-01"
+
+[build]
+command = "npm run build"
+cwd = "."
+
+# Serve static files from dist directory
+[site]
+bucket = "./dist"
+
+# Environment configuration
+[env.production]
+name = "astrology-expert-website-prod"
+
