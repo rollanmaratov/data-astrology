@@ -9,14 +9,12 @@ export default {
     if (response.status === 404 && request.method === "GET") {
       // Check if it looks like a route (no file extension)
       if (!url.pathname.includes(".")) {
-        response = await env.ASSETS.fetch(new Request(new URL("/index.html", url.origin)));
+        response = await env.ASSETS.fetch(
+          new Request(new URL("/index.html", url.origin)),
+        );
       }
     }
 
     return response;
   },
 };
-
-
-
-
