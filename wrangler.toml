@@ -13,4 +13,3 @@ bucket = "./dist"
 # Environment configuration
 [env.production]
 name = "dara-astrology"
-

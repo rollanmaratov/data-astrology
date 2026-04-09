@@ -1,16 +1,17 @@
-<svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
-  <!-- Dark purple background (slate-950) -->
-  <rect width="192" height="192" fill="#020617"/>
-  
-  <!-- Saturn Icon -->
-  <g transform="translate(96, 96)">
-    <!-- Saturn's rings -->
-    <ellipse cx="0" cy="0" rx="45" ry="18" fill="none" stroke="#a855f7" stroke-width="3" opacity="0.8"/>
-    
-    <!-- Saturn's planet -->
-    <circle cx="0" cy="0" r="28" fill="#a855f7"/>
-    
-    <!-- Highlight on planet -->
-    <circle cx="-8" cy="-8" r="6" fill="#d8b4fe" opacity="0.6"/>
-  </g>
+<svg viewBox="0 0 192 192"
+    xmlns="http://www.w3.org/2000/svg">
+    <!-- Dark purple background (slate-950) -->
+    <rect width="192" height="192" fill="#020617"/>
+
+    <!-- Saturn Icon -->
+    <g transform="translate(96, 96)">
+        <!-- Saturn's rings -->
+        <ellipse cx="0" cy="0" rx="45" ry="18" fill="none" stroke="#a855f7" stroke-width="3" opacity="0.8"/>
+
+        <!-- Saturn's planet -->
+        <circle cx="0" cy="0" r="28" fill="#a855f7"/>
+
+        <!-- Highlight on planet -->
+        <circle cx="-8" cy="-8" r="6" fill="#d8b4fe" opacity="0.6"/>
+    </g>
 </svg>

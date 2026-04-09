@@ -1,25 +1,28 @@
 export default {
   async fetch(request, env) {
-    const url = new URL(request.url);
-    const path = url.pathname;
+    try {
+      // Attempt to fetch the requested asset
+      const response = await env.ASSETS.fetch(request);
 
-    // Try to serve the requested file from assets
-    const response = await env.ASSETS.fetch(request);
-
-    // If asset is found, return it
-    if (response.status !== 404) {
-      return response;
+      // If found, return it
+      if (response != null) {
+        return response;
+      }
+    } catch (error) {
+      // Continue to fallback
     }
 
-    // For SPA routing: serve index.html for any non-existent routes
+    // For SPA: If not found and it's a GET request, serve index.html
     if (request.method === "GET") {
-      return await env.ASSETS.fetch(
-        new Request(`${new URL(request.url).origin}/index.html`, {
-          method: "GET",
-        }),
-      );
+      try {
+        return await env.ASSETS.fetch(new Request(new URL("/index.html", request.url)));
+      } catch (error) {
+        return new Response("Not Found", { status: 404 });
+      }
     }
 
-    return response;
+    return new Response("Not Found", { status: 404 });
   },
 };
+
+
