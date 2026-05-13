@@ -14,6 +14,10 @@ export function Layout() {
   const { t } = useTranslation();
 
   useEffect(() => {
+    document.title = t("pageTitle");
+  }, [t]);
+
+  useEffect(() => {
     setIsMenuOpen(false);
     document.documentElement.style.scrollBehavior = "smooth";
     document.documentElement.style.scrollPaddingTop = "64px";
