@@ -24,9 +24,9 @@ export function Home() {
         <div className="absolute inset-0 z-[-1]">
           <div className="absolute inset-0 bg-gradient-to-b from-slate-950/90 via-slate-950/40 to-slate-950 z-10" />
           <img
-            src="https://images.unsplash.com/photo-1563547257011-054b1054e185?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1563547257011-054b1054e185?q=75&w=1200&auto=format&fit=crop"
             alt="Northern lights and stars"
-            className="w-full h-full object-cover opacity-80 mix-blend-screen"
+            className="w-full h-full object-cover opacity-60"
             fetchPriority="high"
             decoding="async"
           />

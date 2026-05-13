@@ -117,7 +117,7 @@ export function Layout() {
       {/* Main Content */}
       <main className="flex-1 pt-16 relative overflow-hidden">
         {/* Subtle background ambient glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-purple-900/20 blur-[120px] rounded-full pointer-events-none -z-10" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-purple-900/20 blur-3xl rounded-full pointer-events-none -z-10" />
         <Outlet />
       </main>
 
@@ -144,7 +144,7 @@ export function Layout() {
               <FaInstagram className="w-5 h-5" />
             </a>
             <a
-              href="https://wa.me/966530205976"
+              href="https://wa.me/61427443669"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 rounded-full bg-indigo-950 border border-indigo-800/50 flex items-center justify-center text-indigo-300 hover:text-white hover:bg-green-900/50 hover:border-green-500/50 transition-all shadow-[0_0_15px_rgba(79,70,229,0.1)] hover:shadow-[0_0_20px_rgba(34,197,94,0.3)]"

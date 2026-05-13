@@ -4,15 +4,15 @@ import { useTranslation } from "react-i18next";
 
 export function Contact() {
   const { t } = useTranslation();
-  const whatsappNumber = "966530205976"; // Dara's Arab number
+  const whatsappNumber = "61427443669"; // Dara's Australian number
   const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 
   return (
     <div className="py-24 px-4 relative z-10 flex items-center justify-center">
       {/* Background elements */}
       <div className="absolute inset-0 z-[-1] overflow-hidden">
-        <div className="absolute top-1/4 right-1/4 w-[40vw] h-[40vw] max-w-md max-h-md bg-purple-900/30 rounded-full blur-[100px] pointer-events-none" />
-        <div className="absolute bottom-1/4 left-1/4 w-[30vw] h-[30vw] max-w-sm max-h-sm bg-indigo-900/30 rounded-full blur-[80px] pointer-events-none" />
+        <div className="absolute top-1/4 right-1/4 w-[40vw] h-[40vw] max-w-md max-h-md bg-purple-900/30 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-1/4 left-1/4 w-[30vw] h-[30vw] max-w-sm max-h-sm bg-indigo-900/30 rounded-full blur-3xl pointer-events-none" />
       </div>
 
       <div className="container mx-auto max-w-4xl flex flex-col items-center">

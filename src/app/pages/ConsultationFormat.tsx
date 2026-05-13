@@ -34,8 +34,8 @@ export function ConsultationFormat() {
   return (
     <div className="py-24 px-4 bg-slate-950 relative overflow-hidden">
       {/* Mystical background elements */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-900/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo-900/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-900/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo-900/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container mx-auto max-w-5xl relative z-10">
         <motion.div

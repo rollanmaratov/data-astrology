@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Sparkles, Award, Star } from "lucide-react";
+import { Award } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 export function About() {
@@ -29,6 +29,7 @@ export function About() {
               src="https://i.imgur.com/bFHkjda.png"
               alt={t("about.name")}
               className="w-full h-auto object-cover aspect-[4/5] transform group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none" />
             <div className="absolute bottom-6 left-6 right-6">
