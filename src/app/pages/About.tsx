@@ -18,7 +18,8 @@ export function About() {
         {/* Image Section */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="w-full md:w-5/12 relative mt-12"
         >
@@ -41,7 +42,8 @@ export function About() {
         {/* Text Section */}
         <motion.div
           initial={{ opacity: 0, x: 30 }}
-          animate={{ opacity: 1, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="w-full md:w-7/12 flex flex-col gap-6"
         >

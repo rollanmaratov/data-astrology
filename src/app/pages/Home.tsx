@@ -27,6 +27,8 @@ export function Home() {
             src="https://images.unsplash.com/photo-1563547257011-054b1054e185?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Northern lights and stars"
             className="w-full h-full object-cover opacity-80 mix-blend-screen"
+            fetchPriority="high"
+            decoding="async"
           />
         </div>
 
