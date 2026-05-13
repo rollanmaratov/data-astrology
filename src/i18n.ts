@@ -19,17 +19,18 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'ru', // Set default language explicitly
-    fallbackLng: 'ru',
+    fallbackLng: 'en',
     debug: false,
 
     interpolation: {
-      escapeValue: false, // not needed for react as it escapes by default
+      escapeValue: false,
     },
 
     detection: {
       order: ['localStorage', 'navigator', 'htmlTag'],
       caches: ['localStorage'],
+      lookupLocalStorage: 'i18nextLng',
+      convertDetectedLanguage: (lng: string) => (lng.startsWith('ru') ? 'ru' : 'en'),
     },
   });
 
